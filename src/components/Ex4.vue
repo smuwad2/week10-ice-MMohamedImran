@@ -19,7 +19,7 @@
             },
             // TODO: Add a new method, to delete a task completed
             deleteTask(idx){
-                this.task.splice(idx, 1)
+                this.taskList.splice(idx, 1)
             }
         }
     }
