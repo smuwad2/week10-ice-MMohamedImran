@@ -5,7 +5,8 @@
         props:{
             subject: String,
             entry: String,
-            mood: String
+            mood: String,
+            id: Number,              // ✅ add this line
 
         },
         computed:{
@@ -25,8 +26,17 @@
     <h5 class="card-title">{{subject}}</h5>
     <p class="card-text">{{entry}}</p>
     
-  </div>
+  <!-- </div>
   <slot></slot>
 </div>
+</template> -->
+<h6 class="card-text">Mood: {{ mood }}</h6>
+
+      <!-- Moved button here -->
+      <button class="btn btn-primary" @click="$emit('deletepost', id)">
+        Delete
+      </button>
+    </div>
+  </div>
 </template>
 
